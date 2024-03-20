@@ -43,5 +43,7 @@ public class C01_Priority extends TestBase {
         String actualUrl = driver.getCurrentUrl();
         Assert.assertTrue(actualUrl.contains(expectedUrlIcerik));
 
+        //localde versiyonlama deneme 1
+
     }
 }
