@@ -44,6 +44,7 @@ public class C01_Priority extends TestBase {
         Assert.assertTrue(actualUrl.contains(expectedUrlIcerik));
 
         //localde versiyonlama deneme 1
+        //localde versiyonlama deneme 2
 
     }
 }
