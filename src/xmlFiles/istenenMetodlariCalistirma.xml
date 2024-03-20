@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--
+Bir class daki tüm metodlari çalıştırmak istersek tek tek secmek yerine
+class ı çalıştırmak daha mantıklı olur
+
+method çalıştırmalarında testNG iki altarnatif oluşturmus
+1- include : çalışmasını istediğimiz method isimlerini yazarız
+2- exclude : çalışsmasını İSTEMEDİĞİMİZ method isimlerini yazarız
+             testNG yazdığımız methodlar dısındaki tüm metodları çalıştırır
+-->
+
+  
+<suite name="istenen metodlar">
+    <test name="Metod calistirma">
+        
+        <classes>
+            <class name="tests.day09_testNG.C01_Priority">
+                <methods>
+                    <include name="youtubeTest"></include>
+                </methods>
+            </class>
+            <class name="tests.day09_testNG.C02_dependsOnMetods">
+                <methods>
+                    <exclude name="ilkUrunTest"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+</suite>

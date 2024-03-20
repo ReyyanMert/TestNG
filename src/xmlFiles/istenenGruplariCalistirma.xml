@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!--
+Test hiyararşisinde bir suit bir veya daha fazla testden olusur
+Bir test ise faklı package class veya methodlar barındırabilir
+aynı sekilde farklı testler aynı class veya methodu çalıştırmak isteyebilir
+
+Bu tür durumlarda her bir test için çalışacak class ve/veya methodları
+groups bilgisi ile işaretleyebiliriz.
+
+grup çalıştırmak için
+xml dosyasında 2 hiyararşi olusturulmalıdır
+1- hangi gruplar çalışacagı veya çalışmayacagı
+2- çalışacak grupların framework deki yeri
+
+Suan da POM(page object model(testbase,testbase_beforeafter)) kullanmadığımız için
+test metodlarının çalışmak için testbase classa ihtiyacı var ama testbase class
+test altında değil ve groplara da dahil değil
+-->
+
+<suite name="e2e testleri">
+    <test name="e2e">
+        <groups>
+            <run>
+                <include name="e2e1"></include>
+                <include name="e2e2"></include>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.*"></package>
+        </packages>
+    </test>
+</suite>
+
